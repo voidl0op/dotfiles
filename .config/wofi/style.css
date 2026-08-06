@@ -1,20 +1,27 @@
 window {
-    background-color: #1e1e2e;
+    background-color: #2d353b;
+    border: 2px solid #a7c080;
     border-radius: 10px;
 }
 
 #input {
     margin: 5px;
     padding: 8px;
-    color: #ffffff;
-    background-color: #2a2a3a;
+    color: #d3c6aa;
+    background-color: #232a2e;
     border-radius: 5px;
+    border: none;
 }
 
 #entry:selected {
-    background-color: #3a3a4a;
+    background-color: #3d484d;
+    border-radius: 5px;
+}
+
+#entry:selected #text {
+    color: #a7c080;
 }
 
 #text {
-    color: #ffffff;
+    color: #d3c6aa;
 }
