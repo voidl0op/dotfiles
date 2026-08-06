@@ -1,7 +1,11 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 34,
+    "margin-top": 6,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 4,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["tray", "pulseaudio", "network", "battery"],
@@ -10,18 +14,26 @@
         "format": "{id}"
     },
     "clock": {
-        "format": "{:%H:%M   %a %d %b}"
+        "format": "\uf017 {:%H:%M  %a %d %b}"
     },
     "battery": {
-        "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
+        "format-charging": "\uf0e7  {capacity}%"
     },
     "network": {
-        "format-wifi": "{essid} ({signalStrength}%)",
-        "format-disconnected": "Disconnected"
+        "format-wifi": "\uf1eb  {signalStrength}%",
+        "format-disconnected": "\uf1e6 Offline",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)"
     },
     "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-icons": ["", "", ""]
+        "format": "{icon}  {volume}%",
+        "format-icons": {
+            "default": ["\uf026", "\uf027", "\uf028"]
+        },
+        "format-muted": "\uf6a9  Muted"
+    },
+    "tray": {
+        "spacing": 10
     }
 }
